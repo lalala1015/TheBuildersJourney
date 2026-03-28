@@ -1,0 +1,13 @@
+{
+  "id": "mainmap_intro",
+  "lines": [
+    {
+      "speaker": "旁白",
+      "content": "江南烟雨，书生初行。"
+    },
+    {
+      "speaker": "书生",
+      "content": "此去京城，愿不负寒窗。"
+    }
+  ]
+}
