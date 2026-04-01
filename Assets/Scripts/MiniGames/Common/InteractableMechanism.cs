@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TheBuildersJourney.MiniGames.Common
 {
@@ -35,7 +35,7 @@ namespace TheBuildersJourney.MiniGames.Common
             state = MechanismState.Triggered;
             Debug.Log($"[Mechanism] {name} triggered.");
 
-            // TODO: 在这里接动画、音效、碰撞体开关
+            // TODO: 鍦ㄨ繖閲屾帴鍔ㄧ敾銆侀煶鏁堛€佺鎾炰綋寮€鍏?
             EnterCooldown();
         }
 

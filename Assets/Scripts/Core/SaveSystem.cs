@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using UnityEngine;
 
@@ -7,8 +7,17 @@ namespace TheBuildersJourney.Core
     [Serializable]
     public class PlayerProgress
     {
-        public int lubanToken = 0;
-        public int unlockedChapter = 1;
+        public int lubanToken = 0;      // 椴佺彮浠?
+        public int unlockedChapter = 1; // 宸茶В閿佺珷鑺?
+
+        // Survival & Economy Stats
+        public int money = 100;         // 鐩樼紶
+        public int fame = 0;            // 鍚嶆湜
+        public float satiety = 100f;    // 楗遍搴?
+        public float fatigue = 0f;      // 鍔崇疮鍊?
+        
+        // Collection
+        public int discoveredWikiCards = 0; // 鍥鹃壌鏀堕泦杩涘害
     }
 
     public static class SaveSystem

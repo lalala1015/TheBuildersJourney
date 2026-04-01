@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheBuildersJourney.MapLogic
@@ -13,21 +13,31 @@ namespace TheBuildersJourney.MapLogic
             new Vector2Int(-1, 0)
         };
 
-        public static bool IsConnected(TileNode[,] grid, Vector2Int start, Vector2Int target)
+        public static bool IsConnected(TileNode[,] grid, Vector2Int start, Vector2Int target, out List<Vector2Int> path)
         {
+            path = new List<Vector2Int>();
             int width = grid.GetLength(0);
             int height = grid.GetLength(1);
 
             bool[,] visited = new bool[width, height];
+            // 记录父节点以便回溯路径
+            Dictionary<Vector2Int, Vector2Int> parentMap = new Dictionary<Vector2Int, Vector2Int>();
             Queue<Vector2Int> queue = new Queue<Vector2Int>();
 
             queue.Enqueue(start);
             visited[start.x, start.y] = true;
 
+            bool found = false;
+
             while (queue.Count > 0)
             {
                 var current = queue.Dequeue();
-                if (current == target) return true;
+                
+                if (current == target) 
+                {
+                    found = true;
+                    break;
+                }
 
                 var currentNode = grid[current.x, current.y];
                 if (currentNode == null || !currentNode.IsWalkable) continue;
@@ -44,9 +54,24 @@ namespace TheBuildersJourney.MapLogic
                     if (CanPass(currentNode, nextNode, i))
                     {
                         visited[next.x, next.y] = true;
+                        parentMap[next] = current;
                         queue.Enqueue(next);
                     }
                 }
+            }
+
+            if (found)
+            {
+                // 回溯构建路径
+                Vector2Int step = target;
+                while (step != start)
+                {
+                    path.Add(step);
+                    step = parentMap[step];
+                }
+                path.Add(start);
+                path.Reverse(); // 将目标回溯的过程倒转为起点到终点的顺序
+                return true;
             }
 
             return false;
