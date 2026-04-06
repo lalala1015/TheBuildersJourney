@@ -1,3 +1,4 @@
+// 文件用途：根据网格逻辑数据生成地图可视化对象，并同步地块旋转表现。
 using UnityEngine;
 using System.Collections.Generic;
 

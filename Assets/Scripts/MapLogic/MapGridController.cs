@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// 文件用途：创建并维护地图网格数据，提供节点访问与原始网格对外读取能力。
+using UnityEngine;
 
 namespace TheBuildersJourney.MapLogic
 {

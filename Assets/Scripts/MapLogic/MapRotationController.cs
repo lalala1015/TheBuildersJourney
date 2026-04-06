@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// 文件用途：处理地图块旋转输入，触发连通性检测并驱动可视化与角色沿路径移动。
+using UnityEngine;
 
 namespace TheBuildersJourney.MapLogic
 {

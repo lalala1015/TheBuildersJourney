@@ -1,4 +1,5 @@
-﻿using System;
+﻿// 文件用途：定义玩家进度数据结构，并负责本地 JSON 存档的保存与加载。
+using System;
 using System.IO;
 using UnityEngine;
 
@@ -7,17 +8,17 @@ namespace TheBuildersJourney.Core
     [Serializable]
     public class PlayerProgress
     {
-        public int lubanToken = 0;      // 椴佺彮浠?
-        public int unlockedChapter = 1; // 宸茶В閿佺珷鑺?
+        public int lubanToken = 0;      // 鲁班币
+        public int unlockedChapter = 1; // 已解锁章节
 
         // Survival & Economy Stats
-        public int money = 100;         // 鐩樼紶
-        public int fame = 0;            // 鍚嶆湜
-        public float satiety = 100f;    // 楗遍搴?
-        public float fatigue = 0f;      // 鍔崇疮鍊?
+        public int money = 100;         // 盘缠
+        public int fame = 0;            // 名望
+        public float satiety = 100f;    // 饱食度
+        public float fatigue = 0f;      // 劳累值
         
         // Collection
-        public int discoveredWikiCards = 0; // 鍥鹃壌鏀堕泦杩涘害
+        public int discoveredWikiCards = 0; // 图鉴收集进度
     }
 
     public static class SaveSystem

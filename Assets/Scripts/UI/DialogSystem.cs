@@ -1,4 +1,5 @@
-﻿using System;
+﻿// 文件用途：加载对话配置并按顺序推进台词显示，提供基础剧情对话流程控制。
+using System;
 using UnityEngine;
 
 namespace TheBuildersJourney.UI

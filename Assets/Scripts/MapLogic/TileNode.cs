@@ -1,4 +1,5 @@
-﻿using System;
+﻿// 文件用途：定义地图格子数据模型、方向掩码与旋转规则，是网格逻辑的基础数据单元。
+using System;
 
 namespace TheBuildersJourney.MapLogic
 {

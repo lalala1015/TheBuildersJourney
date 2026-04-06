@@ -1,3 +1,4 @@
+// 文件用途：管理多层塔楼的输入旋转、层间对齐解锁与隐藏区域触发检查。
 using UnityEngine;
 using System.Collections.Generic;
 

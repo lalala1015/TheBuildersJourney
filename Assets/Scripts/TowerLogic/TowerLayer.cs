@@ -1,3 +1,4 @@
+// 文件用途：表示塔楼单层的旋转与对齐判定逻辑，支持平滑旋转动画。
 using UnityEngine;
 
 namespace TheBuildersJourney.TowerLogic

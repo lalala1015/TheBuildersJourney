@@ -1,3 +1,4 @@
+// 文件用途：控制玩家在网格路径上的移动表现，并联动体力/饱食等生存属性消耗。
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;

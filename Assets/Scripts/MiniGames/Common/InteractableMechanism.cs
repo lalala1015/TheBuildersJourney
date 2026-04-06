@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// 文件用途：提供小游戏交互机关的通用状态机（触发/冷却）与扩展接口。
+using UnityEngine;
 
 namespace TheBuildersJourney.MiniGames.Common
 {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿// 文件用途：基于网格与方向连通规则执行路径连通性校验，并回溯生成可行路径。
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheBuildersJourney.MapLogic
